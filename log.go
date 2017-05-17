@@ -37,7 +37,7 @@ func SetRootLevel(level Level){
 func New() *Logger{
 	logger := logrus.New()
 	logger.Level = convertLevel(rootLevel)
-	logger.Formatter = &CommonFormatter{logrus.JSONFormatter{}}
+	logger.Formatter = &CommonFormatter{}
 
 	return &Logger{logger}
 }
